@@ -29,6 +29,7 @@ This will place your font in your current user directory's Downloads folder. If 
 - Where it states `0x20-0x7f` is the range of symbols in the font.
   - 0x7f is the standard range
   - 0xff is the extended range. Some fonts may fail to convert with the extended range, but try extended range first!
+  - You can go from `0x0-0xFFFF` to include _**all**_ characters within the normal range for most fonts.  You can also do `0x0-0xFFFFF` which covers a lot of unicode based glyphs too.
 - bpp is used for smoothness.  4 is a good value for most fonts. You can change this to either 1, 2, 4, or 8.
 
 > *You may have an issue generating* `.bin` *files if the font you are trying to convert has ` ` (spaces) in the path.
