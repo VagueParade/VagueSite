@@ -19,17 +19,17 @@ For themes on muOS, you can implement custom fonts! To do this, you must first i
 > You may need to type in your computer's admin password.*
 
 # Using the script
-`lv_font_conv --bpp 4 --size 20 --font "username/folder/example.ttf" -r 0x20-0x7F --format bin --no-compress --no-prefilter -o "./Downloads/default.bin"`
+`lv_font_conv --bpp 4 --size 20 --font "username/folder/example.ttf" -r 0x00-0xFF --format bin --no-compress --no-prefilter -o "./Downloads/default.bin"`
 
 Paste this line of code, replacing the `username/folder/example.ttf` with your font (by dragging and dropping it into your terminal window,
 or pasting the file path), and you can convert your font to the right format.
 
 This will place your font in your current user directory's Downloads folder. If you want to change this, just type in your preferred output path at the end of the command line.
 - Feel free to adjust the size value. 20 is a good size for most of the elements on screen.
-- Where it states `0x20-0x7f` is the range of symbols in the font.
-  - 0x7f is the standard range
-  - 0xff is the extended range. Some fonts may fail to convert with the extended range, but try extended range first!
-  - You can go from `0x0-0xFFFF` to include _**all**_ characters within the normal range for most fonts.  You can also do `0x0-0xFFFFF` which covers a lot of unicode based glyphs too.
+- Where it states `0x00-0xFF` is the range of symbols in the font.
+  - 0x20-0x7F is a standard range.
+  - 0x00-0xFF is the extended range. Some fonts may fail to convert with the extended range, but try extended range first!
+  - You can go from `0x0-0xFFFF` to include _**all**_ glyphs within the normal range for most fonts.  You can also do `0x0-0xFFFFF` which covers a lot of unicode based glyphs too.
 - bpp is used for smoothness.  4 is a good value for most fonts. You can change this to either 1, 2, 4, or 8.
 
 > *You may have an issue generating* `.bin` *files if the font you are trying to convert has ` ` (spaces) in the path.
