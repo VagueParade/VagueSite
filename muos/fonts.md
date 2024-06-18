@@ -6,7 +6,7 @@ nav_order: 1
 has_toc: false
 ---
 
-# Converting fonts into a .bin file
+# Converting fonts into a Binary file
 For themes on muOS, you can implement custom fonts! To do this, you can either use this [website](https://lvgl.io/tools/fontconverter), or you can do so offline using terminal commands. For the later, you must first install the script that will convert your
 `.ttf`, `.otf`, or `.woff` type font into a specific `.bin` file that muOS will accept. 
 
@@ -43,4 +43,4 @@ If you want to learn more about this type of font conversion, or for more detail
 
 # Install Custom Fonts
 Within the `./font/` folder, you can drop in a compiled font here either named `default.bin` or `mux_example.bin` according
-to whichever program you'd like that individual font to be used for. Check out the naming conventions in the Theme Structure page.
+to whichever program you'd like that individual font to be used for. 
